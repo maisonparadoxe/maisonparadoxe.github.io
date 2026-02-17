@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <h1 class="site-title">MAISON<br>PARADOXE</h1>
+  <title>MAISON PARADOXE</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -25,9 +25,7 @@
       padding: 0;
     }
 
-    html, body {
-      height: 100%;
-    }
+    html, body { height: 100%; }
 
     body {
       background: var(--bg);
@@ -73,6 +71,7 @@
       line-height: 1;
       color: var(--text-primary);
       margin-bottom: 28px;
+      text-transform: uppercase;
     }
 
     .site-manifesto {
@@ -91,8 +90,14 @@
       margin: 48px 0;
     }
 
-    /* ── LINKS ── */
-    .links-label {
+    .divider-inner {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.62rem;
       letter-spacing: 0.28em;
@@ -101,6 +106,7 @@
       margin-bottom: 16px;
     }
 
+    /* ── LINKS ── */
     .links-list {
       list-style: none;
       display: flex;
@@ -172,9 +178,7 @@
         padding: 40px 20px;
         align-items: flex-start;
       }
-      .site-header {
-        margin-bottom: 48px;
-      }
+      .site-header { margin-bottom: 48px; }
       .links-list li a {
         padding: 14px 16px;
         font-size: 0.68rem;
@@ -202,7 +206,9 @@
     <hr class="divider" />
 
     <nav>
-      <p class="links-label">Expériences &amp; contacts</p>
+
+      <!-- Projets -->
+      <p class="section-label">Expériences</p>
       <ul class="links-list">
         <li>
           <a href="https://maisonparadoxe.github.io/les-affaires-non-resolues/" target="_blank" rel="noopener">
@@ -210,6 +216,13 @@
             <span class="link-arrow">↗</span>
           </a>
         </li>
+      </ul>
+
+      <hr class="divider-inner" />
+
+      <!-- Contacts -->
+      <p class="section-label">Contacts</p>
+      <ul class="links-list">
         <li>
           <a href="https://discord.gg/" target="_blank" rel="noopener">
             <span>Discord</span>
@@ -235,6 +248,7 @@
           </a>
         </li>
       </ul>
+
     </nav>
 
     <footer class="site-footer">
