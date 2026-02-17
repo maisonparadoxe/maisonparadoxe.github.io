@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAISON PARADOXE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:             #0a0a0a;
+      --bg-raised:      #111111;
+      --bg-card:        #141414;
+      --text-primary:   #e8e8e8;
+      --text-secondary: #a0a0a0;
+      --text-muted:     #686868;
+      --border:         #2a2a2a;
+      --border-active:  #555555;
+      --accent:         #c8b896;
+      --accent-dim:     #6b5e3f;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.925rem;
+      line-height: 1.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 60px 24px;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #222; }
+
+    .container {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      margin-bottom: 64px;
+    }
+
+    .site-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .site-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 12vw, 4.2rem);
+      letter-spacing: 0.08em;
+      line-height: 1;
+      color: var(--text-primary);
+      margin-bottom: 28px;
+    }
+
+    .site-manifesto {
+      color: var(--text-secondary);
+      font-size: 0.925rem;
+      line-height: 1.85;
+      max-width: 420px;
+      border-left: 1px solid var(--border);
+      padding-left: 20px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── LINKS ── */
+    .links-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .links-list li a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: border-color 200ms ease, color 200ms ease;
+    }
+
+    .links-list li a:hover {
+      border-color: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    .links-list li a .link-arrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--text-muted);
+      transition: color 200ms ease;
+    }
+
+    .links-list li a:hover .link-arrow {
+      color: var(--accent-dim);
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      margin-top: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .footer-copy {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .footer-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      body {
+        padding: 40px 20px;
+        align-items: flex-start;
+      }
+      .site-header {
+        margin-bottom: 48px;
+      }
+      .links-list li a {
+        padding: 14px 16px;
+        font-size: 0.68rem;
+      }
+      .site-footer {
+        margin-top: 48px;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="site-header">
+      <p class="site-label">Maison d'expériences narratives</p>
+      <h1 class="site-title">Maison<br>Paradoxe</h1>
+      <p class="site-manifesto">
+        Nous concevons des enquêtes, des mystères et des récits à résoudre.<br>
+        Chaque expérience est une affaire ouverte.
+      </p>
+    </header>
+
+    <hr class="divider" />
+
+    <nav>
+      <p class="links-label">Expériences &amp; contacts</p>
+      <ul class="links-list">
+        <li>
+          <a href="https://maisonparadoxe.github.io/les-affaires-non-resolues/" target="_blank" rel="noopener">
+            <span>Les Affaires Non Résolues</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/" target="_blank" rel="noopener">
+            <span>Discord</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/" target="_blank" rel="noopener">
+            <span>X — Twitter</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">
+            <span>Instagram</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:maisonparadoxe@gmail.com">
+            <span>maisonparadoxe@gmail.com</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <footer class="site-footer">
+      <span class="footer-copy">&copy; 2026 Maison Paradoxe</span>
+      <span class="footer-mark">M·P</span>
+    </footer>
+
+  </div>
+</body>
+</html>
