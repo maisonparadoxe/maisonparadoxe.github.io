@@ -7,10 +7,13 @@ Chaque projet explore la tension entre logique, narration et perception.
 
 ---
 
-## Projet en cours
+## Projets en cours
 
 **Les Affaires Non Résolues**  
 Série d’enquêtes progressives mêlant analyse, déduction et immersion.
+
+**Detective Inc** 
+Jeu de gestion narrative — Dirigez une agence de détectives dans un Paris des années 1930. 
 
 ---
 
